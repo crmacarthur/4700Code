@@ -38,6 +38,13 @@ y(nAtoms + 1:nAtoms + numAtoms) = y(nAtoms + 1:nAtoms + numAtoms) + ...
     (rand(1, numAtoms) - 0.5) * AtomSpacing * InitDist + Y0;
 
 AtomType(nAtoms + 1:nAtoms + numAtoms) = Type;
+%for a = 1:numAtoms/(2*LAtoms)  %convert some of the lattice to the other type
+%    pos = (a-1)*2*LAtoms;
+%    for aa=1:LAtoms/2
+%        AtomType(pos+aa*(2))=~Type
+%    end 
+    
+end
 
 if Temp == 0
     Vx(nAtoms + 1:nAtoms + numAtoms) = 0;
