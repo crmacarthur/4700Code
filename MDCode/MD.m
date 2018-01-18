@@ -38,10 +38,10 @@ PlotFile = 'image.gif';
 PlotSize = [100, 100, 1049, 895];
 ScaleV = 0;
 ScaleF = 0;
-PlotPosOnly = 0;
+PlotPosOnly = 1;
 
 % Simulation initiallization
-InitThree
+% InitThree
 % InitBlock
 % InitCirc
 % InitBlock0
