@@ -33,6 +33,11 @@ y(nAtoms + 1:nAtoms + numAtoms) = y(nAtoms + 1:nAtoms + numAtoms) + ...
 
 AtomType(nAtoms + 1:nAtoms + numAtoms) = Type;
 
+
+for a = 1:numAtoms/4  %convert some of the lattice to the other type
+    AtomType(4*a)=~Type  
+end
+
 if Temp == 0
     Vx(nAtoms + 1:nAtoms + numAtoms) = 0;
     Vy(nAtoms + 1:nAtoms + numAtoms) = 0;
