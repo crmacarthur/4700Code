@@ -24,14 +24,11 @@ while t<tstop
     plot(t,vdrift,'*')
     hold on
     subplot(3,1,2); plot(t,mean(v_arr),'*')
-   
-    
-    
-    
     hold on
     subplot(3,1,3)
     plot([x,xp],[v,vp],'r')
     pause(0.001)
+    title(['drift V =',num2str(vdrift)])
     
     t=t+tstep
 end
